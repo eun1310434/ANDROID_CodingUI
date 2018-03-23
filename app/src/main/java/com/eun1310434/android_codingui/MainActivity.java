@@ -41,6 +41,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Item> items = new ArrayList<>();
+
+
     private LinearLayout Mainlayout;
 
 
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         Mainlayout = (LinearLayout) findViewById(R.id.layout);
 
         final ScrollView scrollView = setScrollView(Mainlayout);
-        final LinearLayout subLayout =  setSV_LinearLayout(scrollView);
+        final LinearLayout subLayout = setSV_LinearLayout(scrollView);
 
         Button addBtn = setButton(Mainlayout);
         addBtn.setOnClickListener(new View.OnClickListener() {
@@ -63,9 +65,10 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         //상위 레이아웃인 subLayout의 높이를 갖고와서 해당 뷰의 마지막으로 설정
-                        scrollView.scrollTo(0,subLayout.getHeight());
+                        //post를 활용하여 UI update를 한다...
+                        scrollView.scrollTo(0, subLayout.getHeight());
                     }
-                },30);
+                }, 30);
 
                 //scrollView.pageScroll(scrollView.FOCUS_DOWN);
                 Log.d("subLayout", String.valueOf(subLayout.getHeight()));
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public Button  setButton(LinearLayout _layout) {
+    public Button setButton(LinearLayout _layout) {
         //Button
         Button button = new Button(this);
         button.setText("ADD");
@@ -100,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         return button;
 
     }
+
     public ScrollView setScrollView(LinearLayout _layout) {
 
         //ScrollView
@@ -120,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public LinearLayout setSV_LinearLayout (ScrollView _scrolView) {
+    public LinearLayout setSV_LinearLayout(ScrollView _scrolView) {
         /**Wrap Layout*/
         LinearLayout setSV_LinearLayout = new LinearLayout(this);
         setSV_LinearLayout.setOrientation(LinearLayout.VERTICAL);
@@ -131,14 +135,14 @@ public class MainActivity extends AppCompatActivity {
                 ScrollView.LayoutParams.MATCH_PARENT,
                 ScrollView.LayoutParams.MATCH_PARENT);
 
-        _scrolView.addView(setSV_LinearLayout,SV_Params);
+        _scrolView.addView(setSV_LinearLayout, SV_Params);
 
         return setSV_LinearLayout;
     }
 
 
-    public void addItem(LinearLayout _subLayout){
-        items.add(new Item("Item-"+items.size(), items.size(), _subLayout, this));
+    public void addItem(LinearLayout _subLayout) {
+        items.add(new Item("Item-" + items.size(), items.size(), _subLayout, this));
     }
 }
 
