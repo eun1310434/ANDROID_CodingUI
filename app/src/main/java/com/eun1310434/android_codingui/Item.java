@@ -1,6 +1,6 @@
 /*=====================================================================
-□ Infomation
-  ○ Data : 23.03.2018
+□ INFORMATION
+  ○ Data : 28.05.2018
   ○ Mail : eun1310434@naver.com
   ○ Blog : https://blog.naver.com/eun1310434
   ○ Reference
@@ -8,7 +8,7 @@
      - Hello JAVA Programming
      - http://itmining.tistory.com/5
 
-□ Function
+□ FUNCTION
   ○ 소스코드에서 XML 적용하기
      - LinearLayout 추가
      - ScrollView 추가
@@ -19,11 +19,17 @@
   ○ 소스코드로 ListView 만들기
      - ArrayList로 각각의 View를 관리
 
-□ Study
-  ○ Layout을 설정하기 위해선 각각의 타입에 맞는 LayoutParams을 가지고 와서 설정한다.
-     - RelativeLayout.LayoutParams
-     - LinearLayout.LayoutParams
-     - ScrollView.LayoutParams
+□ STUDY
+  ○ LayoutParams
+     - LayoutParams are used by views to tell their parents how they want to be laid out.
+       See ViewGroup Layout Attributes for a list of all child view attributes that this class supports.
+       The base LayoutParams class just describes how big the view wants to be for both width and height.
+       For each dimension, it can specify one of:
+       FILL_PARENT (renamed MATCH_PARENT in API Level 8 and higher), which means that the view wants to be as big as its parent (minus padding)
+       WRAP_CONTENT, which means that the view wants to be just big enough to enclose its content (plus padding)
+       an exact number
+       There are subclasses of LayoutParams for different subclasses of ViewGroup.
+       For example, AbsoluteLayout has its own subclass of LayoutParams which adds an X and Y value.
 =====================================================================*/
 package com.eun1310434.android_codingui;
 

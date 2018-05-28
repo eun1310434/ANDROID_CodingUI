@@ -1,5 +1,5 @@
 /*=====================================================================
-□ Infomation
+□ INFORMATION
   ○ Data : 23.03.2018
   ○ Mail : eun1310434@naver.com
   ○ Blog : https://blog.naver.com/eun1310434
@@ -8,7 +8,7 @@
      - Hello JAVA Programming
      - http://itmining.tistory.com/5
 
-□ Function
+□ FUNCTION
   ○ 소스코드에서 XML 적용하기
      - LinearLayout 추가
      - ScrollView 추가
@@ -19,7 +19,7 @@
   ○ 소스코드로 ListView 만들기
      - ArrayList로 각각의 View를 관리
 
-□ Study
+□ STUDY
   ○ Layout을 설정하기 위해선 각각의 타입에 맞는 LayoutParams을 가지고 와서 설정한다.
      - RelativeLayout.LayoutParams
      - LinearLayout.LayoutParams
